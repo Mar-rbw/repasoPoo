@@ -1,23 +1,48 @@
 class A:
     def hablar(self):
         print("Hola desde A")
-        
+
 class B:
     def hablar(self):
         print("Hola desde B")
+       
+class C:
+    def hablar(self):
+        print("Hola desde C")
+
+class E(A):
+    def hablar(self):
+        print("Hola desde E")
 
 class F(B):
-    pass
+    def hablar(self):
+        print("Hola desde F")
         
-class C(A, F):
-    pass
-        
-class E(C, F):
-    pass
-        
-class D(E):
-    pass
-        
-d = D()
+class G(C):
+    def hablar(self):
+        print("Hola desde G")
+
+class H(E, F):
+    def hablar(self):
+        print("Hola desde H")
+
+class I(F, G):
+    def hablar(self):
+        print("Hola desde I")
+
+class Z:
+    def hablar(self):
+        print("Hola desde Z")
+
+class J(H, Z, I):
+    def hablar(self):
+        print("Hola desde J")
+
+class K(J):
+    def hablar(self):
+        print("Hola desde K")
+
+d = K()
 
 d.hablar()
+

@@ -46,3 +46,7 @@ d = K()
 
 d.hablar()
 
+#Para saber el recorrido de las herencias aplicadas a alguna clase se ocupa el siguiente comando
+print(K.mro())
+
+Z.hablar(d)
